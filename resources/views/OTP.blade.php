@@ -1,0 +1,1 @@
+Hii there , your otp is {{ $random }}
