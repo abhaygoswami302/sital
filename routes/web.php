@@ -5,6 +5,8 @@ use App\Http\Controllers\Admin\AdminFeeController;
 use App\Http\Controllers\Admin\AdminStudentsController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\StatusController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\FeeController;
 use App\Http\Controllers\FeeOtpController;
 use App\Http\Controllers\StudentDetailsController;
@@ -62,5 +64,11 @@ Route::group(['prefix'=>'admin'], function(){
     });
 });
 
-Auth::routes();
+Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('login', [LoginController::class, 'login']);
+
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::get('register', [RegisterController::class, 'customRegister'])->name('register');
+Route::post('register', [RegisterController::class, 'register123'])->name('post.register');
 
