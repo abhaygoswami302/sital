@@ -564,6 +564,7 @@ class ComposerStaticInit1c15f69c095c6859edd3f28791eecf1f
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\Admin\\AddStudentFeeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AddStudentFeeController.php',
         'App\\Http\\Controllers\\Admin\\AdminFeeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminFeeController.php',
         'App\\Http\\Controllers\\Admin\\AdminStudentsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminStudentsController.php',
         'App\\Http\\Controllers\\Admin\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/DashboardController.php',
@@ -584,7 +585,10 @@ class ComposerStaticInit1c15f69c095c6859edd3f28791eecf1f
         'App\\Http\\Controllers\\VerifyEmailController' => __DIR__ . '/../..' . '/app/Http/Controllers/VerifyEmailController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Livewire\\AddFee' => __DIR__ . '/../..' . '/app/Http/Livewire/AddFee.php',
+        'App\\Http\\Livewire\\AdminStudentFee' => __DIR__ . '/../..' . '/app/Http/Livewire/AdminStudentFee.php',
+        'App\\Http\\Livewire\\AdminStudentUsername' => __DIR__ . '/../..' . '/app/Http/Livewire/AdminStudentUsername.php',
         'App\\Http\\Livewire\\FrontSearch' => __DIR__ . '/../..' . '/app/Http/Livewire/FrontSearch.php',
+        'App\\Http\\Livewire\\StudentUsername' => __DIR__ . '/../..' . '/app/Http/Livewire/StudentUsername.php',
         'App\\Http\\Middleware\\AdminMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/AdminMiddleware.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',

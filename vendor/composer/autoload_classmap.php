@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\Admin\\AddStudentFeeController' => $baseDir . '/app/Http/Controllers/Admin/AddStudentFeeController.php',
     'App\\Http\\Controllers\\Admin\\AdminFeeController' => $baseDir . '/app/Http/Controllers/Admin/AdminFeeController.php',
     'App\\Http\\Controllers\\Admin\\AdminStudentsController' => $baseDir . '/app/Http/Controllers/Admin/AdminStudentsController.php',
     'App\\Http\\Controllers\\Admin\\DashboardController' => $baseDir . '/app/Http/Controllers/Admin/DashboardController.php',
@@ -28,7 +29,10 @@ return array(
     'App\\Http\\Controllers\\VerifyEmailController' => $baseDir . '/app/Http/Controllers/VerifyEmailController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Livewire\\AddFee' => $baseDir . '/app/Http/Livewire/AddFee.php',
+    'App\\Http\\Livewire\\AdminStudentFee' => $baseDir . '/app/Http/Livewire/AdminStudentFee.php',
+    'App\\Http\\Livewire\\AdminStudentUsername' => $baseDir . '/app/Http/Livewire/AdminStudentUsername.php',
     'App\\Http\\Livewire\\FrontSearch' => $baseDir . '/app/Http/Livewire/FrontSearch.php',
+    'App\\Http\\Livewire\\StudentUsername' => $baseDir . '/app/Http/Livewire/StudentUsername.php',
     'App\\Http\\Middleware\\AdminMiddleware' => $baseDir . '/app/Http/Middleware/AdminMiddleware.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',
