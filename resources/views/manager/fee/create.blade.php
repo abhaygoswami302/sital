@@ -39,7 +39,7 @@
                                 <textarea name="note" id="note" cols="30" rows="3" required placeholder="Enter Note" class="form-control"></textarea>
                             </div>
                             <div class="col-sm-12">
-                                <button type="submit" class="btn btn-primary btn-block">Add Fee</button>
+                                <button type="submit" class="alert alert-secondary btn-block" style="color:black;padding:7px 25px;margin-right:10px;border:none;font-weight:600;background:#b79359">Add Fee</button>
                             </div>
                         </div>
                     </form>

@@ -23,7 +23,7 @@
                                 <input type="text" name="otp" id="otp" required autofocus class="form-control" placeholder="Enter OTP">
                             </div>
                              <div class="col-sm-12 py-1">
-                                 <button type="submit" class="btn btn-primary btn-block">Verify OTP</button>
+                                 <button type="submit" class="alert alert-secondary btn-block" style="color:black;padding:7px 25px;margin-right:10px;border:none;font-weight:600;background:#b79359">Verify OTP</button>
                              </div>
                          </div>
                      </form>

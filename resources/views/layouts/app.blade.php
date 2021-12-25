@@ -16,10 +16,14 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <style>
+       
         /* Tabs*/
 section {
     padding: 60px 0;
@@ -96,37 +100,38 @@ section .section-title {
 .Blad_Stu .speedup:hover {
     box-shadow: 0 0 25px 0 rgba(20, 27, 201, .05);
     cursor: pointer;
-    background-image: linear-gradient(-45deg, #fb0054 0%, #f55b2a 100%)
+    background-image: linear-gradient(black, #b79359, #b79359 0%, black 100%)
 }
 
 .Blad_Stu .settings:hover {
     box-shadow: 0 0 25px 0 rgba(20, 27, 201, .05);
     cursor: pointer;
-    background-image: linear-gradient(-45deg, #34b5bf 0%, #210c59 100%)
+    background-image: linear-gradient(to top,black, #b79359, #b79359 0%, black 100%);
+    color: black!important;
 }
 
 .Blad_Stu .privacy:hover {
     box-shadow: 0 0 25px 0 rgba(20, 27, 201, .05);
     cursor: pointer;
-    background-image: linear-gradient(-45deg, #3615e7 0%, #44a2f6 100%)
+    background-image: linear-gradient(black, #b79359, #b79359 0%, black 100%)
 }
 
 .Blad_Stu .backups:hover {
     box-shadow: 0 0 25px 0 rgba(20, 27, 201, .05);
     cursor: pointer;
-    background-image: linear-gradient(-45deg, #fc6a0e 0%, #fdb642 100%)
+    background-image: linear-gradient(black, #b79359, #b79359 0%, black 100%)
 }
 
 .Blad_Stu .ssl:hover {
     box-shadow: 0 0 25px 0 rgba(20, 27, 201, .05);
     cursor: pointer;
-    background-image: linear-gradient(-45deg, #8d40fb 0%, #5a57fb 100%)
+    background-image: linear-gradient(black, #b79359, #b79359 0%, black 100%)
 }
 
 .Blad_Stu .database:hover {
     box-shadow: 0 0 25px 0 rgba(20, 27, 201, .05);
     cursor: pointer;
-    background-image: linear-gradient(-45deg, #27b88d 0%, #22dd73 100%)
+    background-image: linear-gradient(black, #b79359, #b79359 0%, black 100%)
 }
 .Blad_Stu{
     float:left;
@@ -145,35 +150,39 @@ section .section-title {
 </style>
 @livewireStyles
 </head>
-<body style="background-image: url({{ asset('images/patteren.png') }});background-color:lightgray">
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+<body style="background: url({{ asset('images/patteren.png') }});background:#b79359;color:black">
+    <!-- /* background:linear-gradient(to right,
+#ac8e68 16%, #f1f0e7 16% 40%, #ac8e68 40% 60%, #f1f0e7 60% 84%, #ac8e68 84%);}; */ -->
+    <div id="app" >
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark shadow-sm p-0 m-0" 
+        style="background:black;font-family:Playfair Display;font-weight:600" >
             <div class="container">
-                <a class="navbar-brand" href="{{ url('home') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a class="navbar-brand" href="{{ url('home') }}" >
+                    <img src="{{ asset('images/king.png') }}" alt="" style="height:65px">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-top: auto">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                      @auth
-                      <li class="nav-item">
-                        <a class="nav-link" href="{{ route('verify.email') }}">Verify Email</a>
-                    </li>
-                      @endauth
+                   
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
+                        @auth
+                        <li class="nav-item">
+                          <a class="nav-link alert alert-secondary" style="color:black;padding:7px 25px;margin-right:10px;border:none;font-weight:600;background:#b79359" href="{{ route('verify.email') }}">Verify Email</a>
+                        </li>
+                        @endauth
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
-                                <li class="nav-item">
+                                <!--li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
+                                </li-->
                             @endif
 
                             @if (Route::has('register'))
@@ -183,11 +192,11 @@ section .section-title {
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                <a id="navbarDropdown" style="color:black;padding:7px 25px;font-weight:600;border:none;background:#b79359" class="nav-link alert alert-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                   {{ Auth::user()->name }}
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu dropdown-menu-right" style="font-family: Roboto" aria-labelledby="navbarDropdown">
                                     <a href="{{ route('student.create') }}" class="dropdown-item"> 
                                         Add New Student
                                     </a>

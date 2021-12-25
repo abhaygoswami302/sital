@@ -21,6 +21,6 @@
         </select>
     </div>
     <div class="col-sm-6 py-1">
-        <button type="submit" class="btn btn-primary btn-block">Add New Student</button>
+        <button type="submit" class="alert alert-secondary btn-block" style="color:black;padding:7px 25px;margin-right:10px;border:none;font-weight:600;background:#b79359">Add New Student</button>
     </div>
 </div>

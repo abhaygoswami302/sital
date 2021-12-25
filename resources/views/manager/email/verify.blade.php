@@ -18,6 +18,7 @@
                 <div class="card-header">Students ( Email Not Verified )</div>
                 <div class="">
              
+                    @if (count($temporaries) > 0)
                     <table class="table card-body table-hover table-bordered table-striped" id="" width="100%" cellspacing="0">
                         <thead>
                             <tr>
@@ -41,18 +42,20 @@
                                     <td>{{ $student->created_at->diffForHumans() }}</td>
                                     <td>
                                             <a href="{{ route('verify.email.otp', $student->id) }}">
-                                                <button class="btn btn-outline-primary btn-sm">
+                                                <button class="alert alert-secodary btn-sm" style="color:black;padding:7px 25px;margin-right:10px;border:none;font-weight:600;background:#b79359">
                                                     Verify Email
                                                 </button>
                                             </a>
                                     </td>
                                 </tr>
                                 @empty
-                                <h4 class="text-center p-4">No Record Exists</h4>
-                            @endforelse
+                                <h4 class="text-center p-3 alert alert-secondary">No Record Exists</h4>
+                                @endforelse
                         </tbody>
-                    </table>
-
+                    </table>                  
+                    @else
+                    <h4 class="text-center p-3 alert alert-secondary">No Temporary Record Exists</h4>
+                    @endif
                 </div>
             </div>
            </div>
