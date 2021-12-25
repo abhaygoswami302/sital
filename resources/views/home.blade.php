@@ -5,9 +5,16 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="container-fluid mb-5">
-                <div class="text-center mt-5">
+                <div class=" mt-5">
                     <h1  style="font-family:Playfair Display;font-weight:600" >
-                        <b>Immigration Manager</b>
+                        <div class="row">
+                            <div class="col-sm-6 ">
+                                <b style="float: right;color: #b79359">Immigration</b>
+                            </div>
+                            <div class="col-sm-6 text-right">
+                                <b style="color: black">Manager</b>
+                            </div>
+                        </div>
                     </h1>
                 </div>
                 <div class="row">

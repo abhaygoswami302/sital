@@ -150,14 +150,15 @@ section .section-title {
 </style>
 @livewireStyles
 </head>
-<body style="background: url({{ asset('images/patteren.png') }});background:#b79359;color:black">
+<body style="background-image: url(asset('images/patteren.png'));
+background: linear-gradient(to right, black 50%, #b79359 50%);color:black">
     <!-- /* background:linear-gradient(to right,
 #ac8e68 16%, #f1f0e7 16% 40%, #ac8e68 40% 60%, #f1f0e7 60% 84%, #ac8e68 84%);}; */ -->
     <div id="app" >
         <nav class="navbar navbar-expand-md bg-dark navbar-dark shadow-sm p-0 m-0" 
-        style="background:black;font-family:Playfair Display;font-weight:600" >
+        style="background:black!important;border-bottom:1px solid #b79359;font-family:Playfair Display;font-weight:600" >
             <div class="container">
-                <a class="navbar-brand" href="{{ url('home') }}" >
+                <a class="navbar-brand" href="{{ url('home') }}">
                     <img src="{{ asset('images/king.png') }}" alt="" style="height:65px">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
